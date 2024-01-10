@@ -15,7 +15,7 @@
   
   <platform name="android">
 
-    <hook type="before_plugin_install" src="hooks/android/build_gradle_add_dependency.js" />
+    <hook type="before_plugin_install" src="hooks/android/build_gradle_add_dependency.js" /> 
 
     <config-file parent="/*" target="res/xml/config.xml">
       <feature name="OSFirebasePerformance">
@@ -36,12 +36,14 @@
 
     <framework src="com.google.firebase:firebase-perf:20.0.+" />
     <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+    
   </platform>
   
   <platform name="ios">
 
+    <!--<preference name="IOS_FIREBASE_PERFORMANCE_VERSION" default="~> 8.6.0"/>-->
     <preference name="IOS_FIREBASE_PERFORMANCE_VERSION" default="~> 8.13.0"/>
-
+    
     <config-file parent="/*" target="config.xml">
       <feature name="OSFirebasePerformance">
         <param name="ios-package" value="OSFirebasePerformance"/>
